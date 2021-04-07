@@ -5,6 +5,7 @@
     <script src="https://npmcdn.com/vue/dist/vue.js"></script>
     <link rel="stylesheet" href="foundation.min.css" />
     <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   </head>
 
   <body>
@@ -26,21 +27,25 @@
         <div class="small-6 columns">
           <h1 class="text-center">YOU</h1>
           <div class="healthbar">
+            <div class=" animate__animated animate__rotateInUpLeft"> 
             <div
               class="healthbar text-center"
               :class="[lowhealthplayer ? 'barra-vermelha' : 'barra-verde']"
               :style="{width:playerHealth+'%'}"
             ></div>
+            </div>
           </div>
         </div>
         <div class="small-6 columns">
-          <h1 class="text-center">MONSTER</h1>
+          <h1 class="text-center" >MONSTER</h1>
           <div class="healthbar">
+          <div class=" animate__animated animate__rotateInDownRight">  
             <div
               class="healthbar text-center"
               :class="[lowhealthmonster ? 'barra-vermelha' : 'barra-verde']"
               :style="{width:monsterHealth+'%'}"
             ></div>
+          </div>
           </div>
         </div>
       </section>
@@ -183,6 +188,16 @@
           window.location.reload();
         },
       },
+
+      watch:{
+        startGame:function(valor){
+            setTimeout(function(){
+                alert("O jogo acabou");
+                window.location.reload();
+            },10000)
+        }
+      },
+
     });
   </script>
 </html>
