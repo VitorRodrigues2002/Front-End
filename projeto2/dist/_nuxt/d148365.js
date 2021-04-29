@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{398:function(e,n,t){"use strict";t.r(n);var r=t(78),component=Object(r.a)({},(function(){var e=this,n=e.$createElement;return(e._self._c||n)("h1",[e._v("O id do utilizador é "+e._s(e.$route.params.id))])}),[],!1,null,null,null);n.default=component.exports}}]);
